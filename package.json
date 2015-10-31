@@ -8,7 +8,8 @@
 	"dependencies": {
 		"express": "4.12.x",
 		"cfenv": "1.0.x",
-		"cool-ascii-faces": "~1.3.x"
+		"cool-ascii-faces": "~1.3.x",
+		"node-uber" : "0.0.6"
 	},
 	"repository": {},
 	"engines": {
