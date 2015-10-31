@@ -7,10 +7,12 @@
 // This application uses express as its web server
 // for more info, see: http://expressjs.com
 var express = require('express');
+var cool = require('cool-ascii-faces');
 
 // cfenv provides access to your Cloud Foundry environment
 // for more info, see: https://www.npmjs.com/package/cfenv
 var cfenv = require('cfenv');
+var uberApiEndpoint = "https://sandbox-api.uber.com/v1"
 
 // create a new express server
 var app = express();
@@ -26,4 +28,8 @@ app.listen(appEnv.port, '0.0.0.0', function() {
 
 	// print a message when the server starts listening
   console.log("server starting on " + appEnv.url);
+});
+
+app.get('/cool', function(request, response) {
+    response.send(cool());
 });
